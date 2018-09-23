@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "[!] Homebrew has compeleted. Now, let's have it in root."
 if [ "$(whoami)" == "root" ]
 then
 echo "Please run this script NOT under root because brew won't work. Stupid!"
