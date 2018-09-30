@@ -81,6 +81,7 @@ sudo wget https://github.com/Co2333/coreBase/blob/master/ldid2 ./
 sudo cp ./ldid2 /usr/local/bin/ldid2
 sudo chmod +x /usr/local/bin/ldid2
 sudo echo "[Info] Installing THEOS..."
+sudo rm -rf /opt/THEOS
 sudo git clone --recursive https://github.com/theos/theos.git /opt/theos
 sudo chown $(id -u):$(id -g) /opt/theos
 sudo echo "[Info] Adding some shit to your computer... export THEOS"
