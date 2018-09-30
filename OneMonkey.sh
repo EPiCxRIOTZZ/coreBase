@@ -85,7 +85,7 @@ sudo chown $(id -u):$(id -g) /opt/theos
 sudo echo "[Info] Adding some shit to your computer... export THEOS"
 export THEOS=/opt/theos
 export PATH=/opt/theos/bin/:$PATH
-sudo source ~/.bash_profile
+source ~/.bash_profile
 
 sudo echo "[Info] Starting install this Monkey..."
 sudo git clone https://github.com/AloneMonkey/MonkeyDev.git
