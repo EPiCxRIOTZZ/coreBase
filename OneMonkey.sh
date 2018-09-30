@@ -96,7 +96,6 @@ sudo chmod +x ./MonkeyDev/bin/md-uninstall
 sudo rm -rf /opt/MonkeyDev
 sudo ./MonkeyDev/bin/md-uninstall
 sudo ./MonkeyDev/bin/md-install
-sudo cp ./MonkeyDev/bin/class-dump /usr/locla/bin/class-dump
 
 sudo echo "[Info] Starting install frida..."
 sudo pip install frida-tools --ignore-installed six wcwidth
@@ -117,6 +116,17 @@ sudo cp ./jtool /usr/local/bin/jtool
 sudo cp ./joker.universal /usr/local/bin/joker
 sudo chmod +x /usr/local/bin/jtool
 sudo chmod +x /usr/local/bin/joker
+
+sudo echo "[Info] Install class-dump also by additional..."
+sudo wget http://stevenygard.com/download/class-dump-3.5.tar.gz
+sudo tar -xzf class-dump-3.5.tar.gz
+sudo cp ./class-dump-3.5/class-dump /usr/local/bin/class-dump
+sudo chmod +x /usr/local/bin/class-dump
+
+sudo echo "[Info] Install jtool2 for future use..."
+sudo wget https://github.com/Co2333/coreBase/raw/master/jtool2
+sudo cp ./jtool2 /usr/local/bin/jtool2
+sudo chmod +x /usr/local/bin/jtool2
 
 
 # sudo echo "[!] Tell me your iOS ssh password. I will insert it to this py."
