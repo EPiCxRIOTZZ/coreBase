@@ -90,7 +90,8 @@ source ~/.bash_profile
 sudo echo "[Info] Starting install this Monkey..."
 sudo git clone https://github.com/AloneMonkey/MonkeyDev.git
 sudo chmod +x ./MonkeyDev/bin/md-install
-sudo sudo ./MonkeyDev/bin/md-install
+sudo ./MonkeyDev/bin/md-install
+sudo cp ./MonkeyDev/bin/class-dump /usr/locla/bin/class-dump
 
 sudo echo "[Info] Starting install frida..."
 sudo pip install frida-tools --ignore-installed six wcwidth
