@@ -106,11 +106,16 @@ sudo cp ./frida-ios-dump/process.sh /usr/local/bin/process.sh
 sudo cp ./frida-ios-dump/dump.js /usr/local/bin/dump.js
 sudo cp ./frida-ios-dump/dump.py /usr/local/bin/fridaDP.py
 
-sudo echo "[Info] Starting install jtool by additional..."
+sudo echo "[Info] Starting install jtool and joker tool by additional..."
 cd ~/OneMonkey
 sudo wget http://www.newosxbook.com/tools/jtool.tar
+sudo wget http://www.newosxbook.com/tools/joker.tar
 sudo tar -xvf jtool.tar
+sudo tar -xvf joker.tar
 sudo cp ./jtool /usr/local/bin/jtool
+sudo cp ./joker.universal /usr/local/bin/joker
+sudo chmod +x /usr/local/bin/jtool
+sudo chmod +x /usr/local/bin/joker
 
 
 # sudo echo "[!] Tell me your iOS ssh password. I will insert it to this py."
