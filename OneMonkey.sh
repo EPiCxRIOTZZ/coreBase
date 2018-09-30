@@ -91,6 +91,7 @@ sudo echo "[Info] Starting install this Monkey..."
 sudo git clone https://github.com/AloneMonkey/MonkeyDev.git
 sudo chmod +x ./MonkeyDev/bin/md-install
 sudo chmod +x ./MonkeyDev/bin/md-uninstall
+sudo rm -rf /opt/MonkeyDev
 sudo ./MonkeyDev/bin/md-uninstall
 sudo ./MonkeyDev/bin/md-install
 sudo cp ./MonkeyDev/bin/class-dump /usr/locla/bin/class-dump
