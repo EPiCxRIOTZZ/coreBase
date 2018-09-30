@@ -98,37 +98,36 @@ sudo git clone https://github.com/AloneMonkey/frida-ios-dump.git
 sudo pip install -r ./frida-ios-dump/requirements.txt  --upgrade
 sudo echo "[!] dump.py will be install to /usr/local/bin and named fridaDP.py"
 sudo cp ./frida-ios-dump/process.sh /usr/local/bin/process.sh
-sudo cp ./frida-ios-dump/dump.js ./frida-ios-dump/fridaDP.js
-sudo cp ./frida-ios-dump/fridaDP.js /usr/local/bin/fridaDP.js
-sudo cp ./frida-ios-dump/dump.py ./frida-ios-dump/fridaDP.py
-sudo sed -i '' -e 's/dump.js/fridaDP.js/g' ./frida-ios-dump/fridaDP.py
-sudo cp ./frida-ios-dump/fridaDP.py /usr/local/bin/fridaDP.py
-sudo echo "[!] Tell me your iOS ssh password. I will insert it to this py."
+sudo cp ./frida-ios-dump/dump.js /usr/local/bin/dump.js
+sudo cp ./frida-ios-dump/dump.py /usr/local/bin/fridaDP.py
 
-while true; do
-read -sp '[*] Password: ' passvar
-read -p "[*] Is this your password? $passvar  [Y(es)/N(o)]:" yn
-case $yn in
-[Yy]* ) break;;
-[Nn]* ) sudo echo "[Error] Fine, stupid. Let's do it again.";;
-* ) echo "[Error] Fuck U! Please answer y or n. Let's do it again.";;
-esac
-done
-export SEDTMP=s/alpine/$passvar/g
-sudo sed -i '' -e $SEDTMP /usr/local/bin/fridaDP.py
 
-sudo echo "[!] Tell me your iOS ssh address. I will insert it to this py."
-while true; do
-read -sp '[*] iP Address: ' passvar
-read -p "[*] Is this your iP Address? $passvar  [Y(es)/N(o)]:" yn
-case $yn in
-[Yy]* ) break;;
-[Nn]* ) sudo echo "[Error] Fine, stupid. Let's do it again.";;
-* ) echo "[Error] Fuck U! Please answer y or n. Let's do it again.";;
-esac
-done
-export SEDTMP=s/localhost/$passvar/g
-sudo sed -i '' -e $SEDTMP /usr/local/bin/fridaDP.py
+# sudo echo "[!] Tell me your iOS ssh password. I will insert it to this py."
+
+# while true; do
+# read -sp '[*] Password: ' passvar
+# read -p "[*] Is this your password? $passvar  [Y(es)/N(o)]:" yn
+# case $yn in
+# [Yy]* ) break;;
+# [Nn]* ) sudo echo "[Error] Fine, stupid. Let's do it again.";;
+# * ) echo "[Error] Fuck U! Please answer y or n. Let's do it again.";;
+# esac
+# done
+# export SEDTMP=s/alpine/$passvar/g
+# sudo sed -i '' -e $SEDTMP /usr/local/bin/fridaDP.py
+
+# sudo echo "[!] Tell me your iOS ssh address. I will insert it to this py."
+# while true; do
+# read -sp '[*] iP Address: ' passvar
+# read -p "[*] Is this your iP Address? $passvar  [Y(es)/N(o)]:" yn
+# case $yn in
+# [Yy]* ) break;;
+# [Nn]* ) sudo echo "[Error] Fine, stupid. Let's do it again.";;
+# * ) echo "[Error] Fuck U! Please answer y or n. Let's do it again.";;
+# esac
+# done
+# export SEDTMP=s/localhost/$passvar/g
+# sudo sed -i '' -e $SEDTMP /usr/local/bin/fridaDP.py
 
 sudo echo "[*] Done? Yes. Removing files we don't need anymore."
 sudo rm -rf ~/OneMonkey
