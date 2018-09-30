@@ -72,6 +72,7 @@ echo "[!] Homebrew has compeleted. Now, let's have it in root."
 
 sudo echo "Lets install pip first..."
 sudo easy_install pip
+sudo rm -rf ~/OneMonkey
 sudo mkdir ~/OneMonkey
 cd ~/OneMonkey
 
@@ -104,6 +105,12 @@ sudo echo "[!] dump.py will be install to /usr/local/bin and named fridaDP.py"
 sudo cp ./frida-ios-dump/process.sh /usr/local/bin/process.sh
 sudo cp ./frida-ios-dump/dump.js /usr/local/bin/dump.js
 sudo cp ./frida-ios-dump/dump.py /usr/local/bin/fridaDP.py
+
+sudo echo "[Info] Starting install jtool by additional..."
+cd ~/OneMonkey
+sudo wget http://www.newosxbook.com/tools/jtool.tar
+sudo tar -xvf jtool.tar
+sudo cp ./jtool /usr/local/bin/jtool
 
 
 # sudo echo "[!] Tell me your iOS ssh password. I will insert it to this py."
