@@ -78,9 +78,10 @@ echo -e "$rootpassvar\n" | sudo -S  mkdir ~/OneMonkey
 cd ~/OneMonkey
 
 echo -e "$rootpassvar\n" | sudo -S  echo "[Info] Installing ldid2...... for some stupid jb like ......."
-echo -e "$rootpassvar\n" | sudo -S  wget https://github.com/Co2333/coreBase/blob/master/ldid2?raw=true ./
+echo -e "$rootpassvar\n" | sudo -S  wget https://github.com/Co2333/coreBase/raw/master/ldid2
 echo -e "$rootpassvar\n" | sudo -S  cp ./ldid2 /usr/local/bin/ldid2
 echo -e "$rootpassvar\n" | sudo -S  chmod +x /usr/local/bin/ldid2
+
 echo -e "$rootpassvar\n" | sudo -S  echo "[Info] Installing THEOS..."
 echo -e "$rootpassvar\n" | sudo -S  rm -rf /opt/THEOS
 echo -e "$rootpassvar\n" | sudo -S  git clone --recursive https://github.com/theos/theos.git /opt/theos
