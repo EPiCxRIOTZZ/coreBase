@@ -77,7 +77,7 @@ sudo mkdir ~/OneMonkey
 cd ~/OneMonkey
 
 sudo echo "[Info] Installing ldid2...... for some stupid jb like ......."
-sudo wget https://github.com/Co2333/coreBase/blob/master/ldid2 ./
+sudo wget https://github.com/Co2333/coreBase/blob/master/ldid2?raw=true ./
 sudo cp ./ldid2 /usr/local/bin/ldid2
 sudo chmod +x /usr/local/bin/ldid2
 sudo echo "[Info] Installing THEOS..."
