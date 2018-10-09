@@ -7,6 +7,7 @@ echo "Please run this script NOT under root because brew won't work. Stupid!"
 exit
 fi
 
+read -sp '[*] Tell me Root Shell Password: ' rootpassvar
 
 echo "[*] Starting install MonkeyDev"
 echo "[!] Network is required. Considering connect to a vpn."
@@ -70,7 +71,7 @@ fi
 
 echo "[!] Homebrew has compeleted. Now, let's have it in root."
 
-sudo echo "Lets install pip first..."
+echo -e "$rootpassvar\n" | sudo -S echo "Lets install pip first..."
 sudo easy_install pip
 sudo rm -rf ~/OneMonkey
 sudo mkdir ~/OneMonkey
